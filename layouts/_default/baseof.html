@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {{ partial "head.html" . }}
     {{ block "schema" . }}{{ end }}
-    {{ partialCached "head/head-bottom" . }}
+    {{ partialCached "head/head-bottom" . $.Lang }}
   </head>
   <body id="davids-neighbour-com">
     {{ partial "body-top.html" . }}
     <div id="content" class="container">
       <div id="contentcolumn" class="row">
-        <div class="col-12">       
+        <div class="col-12">
            {{ block "main" . }}{{ end }}
         </div>
       </div>

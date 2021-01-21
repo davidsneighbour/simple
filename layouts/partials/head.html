@@ -5,10 +5,10 @@
 
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
-{{ partialCached "head/favicon.html" . }}
+{{ partialCached "head/favicon.html" . $.Lang }}
 {{ with .Params.robotsdisallow }}<meta name="robots" content="noindex, nofollow, noarchive">{{ end }}
 
-{{ with partialCached "head/css.html" . }}
+{{ with partialCached "head/css.html" . $.Lang }}
     <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}">
 {{ end }}
 
